@@ -1,0 +1,5 @@
+Entire source code is in the folder ‘EBMS_SourceCode’.
+
+Inspection-code-TechFreak.docx has the code for the core functionalities in our project ‘Electricity bill management system’.
+
+Download ‘EBMS_SourceCode’ folder from GIT repository.

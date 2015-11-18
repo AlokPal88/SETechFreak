@@ -4,7 +4,16 @@ Inspection-code-TechFreak.docx has the code for the core functionalities in our 
 
 Download ‘EBMS_SourceCode’ folder from GIT repository.
 
-************How to execute project******************
+Automated JUnit test cases are located at SETechFreak\test\cseb
+
+All compiled .class files are located at SETechFreak\build
+
+************Steps to execute project******************
+Download and install MySQL installer and NetBeans IDE 8.1 and setup java environment.
+
+Create a database with name 'cseb' and corresponding database tables by using "cseb.sql" file.
+
+Add new System DSN for MySQL database with name 'cseb'.
 
 When you build an Java application project that has a main class, the IDE
 automatically copies all of the JAR

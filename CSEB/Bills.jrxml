@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     bills.`billid` AS bills_billid,
+     bills.`customerid` AS bills_customerid,
+     bills.`datefrom` AS bills_datefrom,
+     bills.`dateto` AS bills_dateto,
+     bills.`units` AS bills_units,
+     bills.`maxunit` AS bills_maxunit,
+     bills.`minunit` AS bills_minunit,
+     bills.`maxcharge` AS bills_maxcharge,
+     bills.`mincharge` AS bills_mincharge,
+     bills.`status` AS bills_status,
+     customermaster.`customerid` AS customermaster_customerid,
+     customermaster.`name` AS customermaster_name,
+     customermaster.`fname` AS customermaster_fname,
+     customermaster.`dob` AS customermaster_dob,
+     customermaster.`gender` AS customermaster_gender,
+     customermaster.`address1` AS customermaster_address1,
+     customermaster.`city1` AS customermaster_city1,
+     customermaster.`district1` AS customermaster_district1,
+     customermaster.`state1` AS customermaster_state1,
+     customermaster.`address2` AS customermaster_address2,
+     customermaster.`city2` AS customermaster_city2,
+     customermaster.`district2` AS customermaster_district2,
+     customermaster.`contectno` AS customermaster_contectno,
+     customermaster.`connectiontype` AS customermaster_connectiontype,
+     customermaster.`usertype` AS customermaster_usertype,
+     customermaster.`regdate` AS customermaster_regdate,
+     customermaster.`status` AS customermaster_status
+FROM
+     `customermaster` customermaster INNER JOIN `bills` bills ON customermaster.`customerid` = bills.`customerid`]]>
+	</queryString>
+	<field name="bills_billid" class="java.lang.String"/>
+	<field name="bills_customerid" class="java.lang.String"/>
+	<field name="bills_datefrom" class="java.sql.Date"/>
+	<field name="bills_dateto" class="java.sql.Date"/>
+	<field name="bills_units" class="java.lang.Integer"/>
+	<field name="bills_maxunit" class="java.lang.Integer"/>
+	<field name="bills_minunit" class="java.lang.Integer"/>
+	<field name="bills_maxcharge" class="java.math.BigDecimal"/>
+	<field name="bills_mincharge" class="java.math.BigDecimal"/>
+	<field name="bills_status" class="java.lang.Integer"/>
+	<field name="customermaster_customerid" class="java.lang.String"/>
+	<field name="customermaster_name" class="java.lang.String"/>
+	<field name="customermaster_fname" class="java.lang.String"/>
+	<field name="customermaster_dob" class="java.sql.Date"/>
+	<field name="customermaster_gender" class="java.lang.String"/>
+	<field name="customermaster_address1" class="java.lang.String"/>
+	<field name="customermaster_city1" class="java.lang.String"/>
+	<field name="customermaster_district1" class="java.lang.String"/>
+	<field name="customermaster_state1" class="java.lang.String"/>
+	<field name="customermaster_address2" class="java.lang.String"/>
+	<field name="customermaster_city2" class="java.lang.String"/>
+	<field name="customermaster_district2" class="java.lang.String"/>
+	<field name="customermaster_contectno" class="java.lang.String"/>
+	<field name="customermaster_connectiontype" class="java.lang.String"/>
+	<field name="customermaster_usertype" class="java.lang.String"/>
+	<field name="customermaster_regdate" class="java.sql.Date"/>
+	<field name="customermaster_status" class="java.lang.Integer"/>
+	<variable name="Total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="218" y="8" width="173" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bill Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="226" splitType="Stretch">
+			<textField>
+				<reportElement x="183" y="33" width="154" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customermaster_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="53" width="154" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customermaster_fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="73" width="294" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customermaster_address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="93" width="154" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customermaster_city1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="113" width="154" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customermaster_state1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{bills_datefrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{bills_dateto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bills_customerid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="150" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[bills_units]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="150" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{bills_units}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="180" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[bills_maxunit]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="180" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{bills_maxunit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="204" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[bills_minunit]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="204" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{bills_minunit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="180" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[bills_maxcharge]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="364" y="180" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{bills_maxcharge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="259" y="204" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[bills_mincharge]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="366" y="204" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{bills_mincharge}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="370" y="11" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{Total}=$F{bills_maxcharge}+$F{bills_mincharge}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

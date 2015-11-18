@@ -1,0 +1,166 @@
+
+
+                            CSEB
+
+
+
+
+  Bill N 1
+                              5/1/11 12:      6/1/11 12:
+
+
+  Custom 1
+
+  Name   AK
+         DANTEWADA
+  Addres
+  city   DANTEWADA
+
+         9407768736
+  Contec
+
+
+                        Use Units   Total Amt.
+              bills_unit90
+
+              bills_maxu100         200.00
+
+              bills_minu50          100.00
+
+                        Total :
+                                    300.00
+
+
+  Bill N 2
+                              1/7/11 12:      1/8/11 12:
+
+
+  Custom 1
+
+  Name   AK
+         DANTEWADA
+  Addres
+  city   DANTEWADA
+
+         9407768736
+  Contec
+
+
+                        Use Units   Total Amt.
+              bills_unit90
+
+              bills_maxu110         220.00
+
+              bills_minu20          110.00
+
+                        Total :
+                                    330.00
+
+
+    3                                    1
+                         Page 1 o 3
+
+
+
+
+
+  Bill N 3
+                              1/7/11 12:      1/8/11 12:
+
+
+  Custom 2
+
+  Name   SK
+         BHILAI
+  Addres
+  city   BHILAI
+
+         9179500151
+  Contec
+
+
+                        Use Units   Total Amt.
+              bills_unit250
+
+              bills_maxu40          120.00
+
+              bills_minu0           80.00
+
+                        Total :
+                                    200.00
+
+
+  Bill N 4
+                              7/1/11 12:      8/1/11 12:
+
+
+  Custom 2
+
+  Name   SK
+         BHILAI
+  Addres
+  city   BHILAI
+
+         9179500151
+  Contec
+
+
+                        Use Units   Total Amt.
+              bills_unit200
+
+              bills_maxu210         630.00
+
+              bills_minu10          420.00
+
+                        Total :
+                                    1050.00
+
+
+    3                                    2
+                         Page 2 o 3
+
+
+
+
+
+  Bill N 5
+                              8/1/11 12:      9/1/11 12:
+
+
+  Custom 1
+
+  Name   AK
+         DANTEWADA
+  Addres
+  city   DANTEWADA
+
+         9407768736
+  Contec
+
+
+                        Use Units   Total Amt.
+              bills_unit100
+
+              bills_maxu0           0.00
+
+              bills_minu10          0.00
+
+                        Total :
+                                    0.00
+
+
+
+
+
+
+
+
+
+
+
+
+    3                                    3
+                         Page 3 o 3
+
+
+
